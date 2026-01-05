@@ -378,7 +378,7 @@
           </div><!-- Flywheel Chart -->
           <div
             class="relative bg-surface/30 rounded-2xl p-8 border border-stroke/50 backdrop-blur-sm">
-            <div id="flywheel-chart" class="h-[400px] w-full"></div>
+            <img src="assets/chart.png" alt="Where Your Money Goes" class="w-full h-auto">
           </div>
         </div>
       </div>
@@ -765,90 +765,7 @@
       </div>
     </section><!-- Footer -->
     <footer id="footer" class="bg-charcoal pt-20 pb-10 border-t border-divider">
-    </footer><!-- Chart Script -->
-    <script>
-      window.addEventListener('load', function()
-      {
-        try
-        {
-          // Flywheel Chart - Sankey Diagram to show flow of funds/impact
-          var data = {
-            type: "sankey",
-            orientation: "h",
-            node:
-            {
-              pad: 15,
-              thickness: 20,
-              line:
-              {
-                color: "black",
-                width: 0.5
-              },
-              label: ["Subscriber ($120)", "Global Dreamzzz Platform",
-                "", "                    Production", "                     Education",
-                "                       Housing", "                  Mentorship", 
-              ],
-              color: ["#4F6BFF", "#1E2436", "#3A52D8", "#8F95A3",
-                "#7C8CFF", "#7C8CFF", "#7C8CFF", "#242B40"
-              ],
-              hoverinfo: "skip" // Disable hover tooltips
-            },
-            link:
-            {
-              source: [0, 1, 1, 2, 2, 2, 3],
-              target: [1, 2, 3, 4, 5, 6, 7],
-              value: [120, 96, 24, 32, 32, 32, 24],
-              color: ["rgba(79, 107, 255, 0.2)", "rgba(58, 82, 216, 0.3)",
-                "rgba(143, 149, 163, 0.1)", "rgba(124, 140, 255, 0.2)",
-                "rgba(124, 140, 255, 0.2)", "rgba(124, 140, 255, 0.2)",
-                "rgba(36, 43, 64, 0.1)"
-              ],
-              hoverinfo: "skip" // Disable hover tooltips on links
-            }
-          }
-
-          var data = [data]
-
-          var layout = {
-            title:
-            {
-              text: "Where Your Money Goes",
-              font:
-              {
-                size: 16,
-                color: "#F2F4F8",
-                family: "Inter"
-              }
-            },
-            font:
-            {
-              size: 12,
-              color: "#C7CBD6"
-            },
-            paper_bgcolor: "rgba(0,0,0,0)",
-            plot_bgcolor: "rgba(0,0,0,0)",
-            margin:
-            {
-              t: 40,
-              r: 10,
-              b: 10,
-              l: 10
-            },
-            height: 400
-          }
-
-          Plotly.newPlot('flywheel-chart', data, layout,
-          {
-            responsive: true,
-            displayModeBar: false
-          });
-        }
-        catch (e)
-        {
-          console.error("Chart error:", e);
-        }
-      });
-    </script>
+    </footer>
   </body>
 
 </html>
