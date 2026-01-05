@@ -6,6 +6,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Global Dreamzzz | Empowering Youth Through Storytelling</title>
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Empowering Youth Through Digital Storytelling">
+    <meta property="og:description" content="Watch authentic stories. Fund real futures. Support youth-focused initiatives through responsible storytelling. 80% of revenue goes directly to impact.">
+    <meta property="og:image" content="assets/og-image.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Empowering Youth Through Digital Storytelling">
+    <meta name="twitter:description" content="Watch authentic stories. Fund real futures. Support youth-focused initiatives through responsible storytelling. 80% of revenue goes directly to impact.">
+    <meta name="twitter:image" content="assets/og-image.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.plot.ly/plotly-3.1.1.min.js"></script>
     <script>
@@ -782,13 +795,13 @@
                 width: 0.5
               },
               label: ["Subscriber ($120)", "Global Dreamzzz Platform",
-               "Production", "Education",
-                "Housing", "Mentorship", 
+                "", "                    Production", "                     Education",
+                "                       Housing", "                  Mentorship", 
               ],
               color: ["#4F6BFF", "#1E2436", "#3A52D8", "#8F95A3",
                 "#7C8CFF", "#7C8CFF", "#7C8CFF", "#242B40"
               ],
-              hoverinfo: "none" // Clean look
+              hoverinfo: "skip" // Disable hover tooltips
             },
             link:
             {
@@ -799,7 +812,8 @@
                 "rgba(143, 149, 163, 0.1)", "rgba(124, 140, 255, 0.2)",
                 "rgba(124, 140, 255, 0.2)", "rgba(124, 140, 255, 0.2)",
                 "rgba(36, 43, 64, 0.1)"
-              ]
+              ],
+              hoverinfo: "skip" // Disable hover tooltips on links
             }
           }
 
