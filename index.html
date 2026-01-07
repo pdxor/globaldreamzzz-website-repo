@@ -378,7 +378,10 @@
           </div><!-- Flywheel Chart -->
           <div
             class="relative bg-surface/30 rounded-2xl p-8 border border-stroke/50 backdrop-blur-sm">
-            <img src="assets/chart.png" alt="Where Your Money Goes" class="w-full h-auto">
+            <!-- Desktop/Tablet Chart (md and up) -->
+            <img src="assets/chart.png" alt="Where Your Money Goes" class="hidden md:block w-full h-auto">
+            <!-- Mobile Chart (below md) -->
+            <img src="assets/mobile-chart.png" alt="Where Your Money Goes" class="block md:hidden w-full h-auto">
           </div>
         </div>
       </div>
