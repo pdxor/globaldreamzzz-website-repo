@@ -595,18 +595,46 @@
           </div>
           <!-- Event Video -->
           <div>
-            <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-stroke">
+            <div id="r1-video-container" class="relative rounded-2xl overflow-hidden shadow-2xl border border-stroke cursor-pointer group" onclick="playR1Video()">
+              <img
+                id="r1-thumb"
+                src="assets/r1-video-thumb.png"
+                alt="Event recap video thumbnail"
+                class="w-full h-auto"
+                style="max-height: 700px; object-fit: cover;">
+              <div id="r1-play-btn" class="absolute inset-0 flex items-center justify-center">
+                <div class="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30 group-hover:bg-white/30 group-hover:scale-110 transition-all duration-300">
+                  <i class="fa-solid fa-play text-white text-2xl ml-1"></i>
+                </div>
+              </div>
               <video
+                id="r1-video"
                 src="assets/R1.mov"
                 controls
                 playsinline
-                preload="metadata"
-                class="w-full h-auto"
+                preload="none"
+                class="w-full h-auto hidden"
                 style="max-height: 700px; object-fit: contain;">
                 Your browser does not support the video tag.
               </video>
             </div>
           </div>
+          <script>
+            function playR1Video() {
+              var thumb = document.getElementById('r1-thumb');
+              var btn = document.getElementById('r1-play-btn');
+              var video = document.getElementById('r1-video');
+              var container = document.getElementById('r1-video-container');
+              if (video.classList.contains('hidden')) {
+                thumb.classList.add('hidden');
+                btn.classList.add('hidden');
+                video.classList.remove('hidden');
+                container.classList.remove('cursor-pointer');
+                container.onclick = null;
+                video.play();
+              }
+            }
+          </script>
         </div>
       </div>
     </section><!-- Pricing Section -->
